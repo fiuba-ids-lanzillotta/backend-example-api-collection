@@ -1,0 +1,27 @@
+meta {
+  name: Reemplazar alumno
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{protocol}}://{{host}}{{base_url}}/alumnos/1
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "email": "juan.perez@mail.com"
+  }
+}
+
+docs {
+  Reemplaza todos los campos de un alumno existente (PUT). Requiere nombre, apellido y email.
+}

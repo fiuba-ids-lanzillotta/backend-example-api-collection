@@ -1,0 +1,15 @@
+meta {
+  name: Eliminar alumno
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{protocol}}://{{host}}{{base_url}}/alumnos/1
+  body: none
+  auth: none
+}
+
+docs {
+  Elimina un alumno por su ID.
+}

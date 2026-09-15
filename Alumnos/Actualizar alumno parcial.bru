@@ -1,0 +1,25 @@
+meta {
+  name: Actualizar alumno parcial
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{protocol}}://{{host}}{{base_url}}/alumnos/1
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "juan.perez.nuevo@mail.com"
+  }
+}
+
+docs {
+  Actualiza parcialmente uno o más campos de un alumno (PATCH): nombre, apellido y/o email.
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Listar alumnos
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}{{base_url}}/alumnos
+  body: none
+  auth: none
+}
+
+docs {
+  Lista todos los alumnos. Devuelve 204 si no hay alumnos cargados.
+}
